@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Aryan Sarode portfolio: software projects, skills, experience, and contact links."
+    >
+    <title>Aryan Sarode | Software Developer</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230f766e'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='white'%3EAS%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Aryan Sarode home">AS</a>
+      <nav class="nav-links" aria-label="Portfolio sections">
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Portfolio introduction">
+        <img class="hero-image" src="assets/portfolio-hero.png" alt="">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Software developer</p>
+          <h1>Aryan Sarode</h1>
+          <p class="hero-copy">
+            MS Computer Science student at Northeastern building full-stack systems, AI tools,
+            and data-driven software with a focus on performance and clean architecture.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#work">View projects</a>
+            <a class="button secondary" href="assets/aryan-sarode-resume.pdf">Resume</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro-band" aria-label="Portfolio highlights">
+        <div class="metric">
+          <strong>MSCS</strong>
+          <span>Northeastern University, Boston, 2025-2027</span>
+        </div>
+        <div class="metric">
+          <strong>Full stack</strong>
+          <span>React, Angular, Node.js, Spring Boot, PostgreSQL</span>
+        </div>
+        <div class="metric">
+          <strong>AI systems</strong>
+          <span>LSTM forecasting, local RAG, NLP datasets, vector search</span>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects with clear thinking under the hood.</h2>
+        </div>
+        <div class="project-grid">
+          <article class="project-card featured">
+            <div>
+              <p class="project-kicker">Enterprise system</p>
+              <h3>IT Service Management System</h3>
+              <p>
+                Designed a PostgreSQL-backed service platform with 50+ relational tables, audit
+                logging, JWT authentication, and role-based access across incident, asset, and
+                change request modules.
+              </p>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>Angular</li>
+              <li>Node.js</li>
+              <li>PostgreSQL</li>
+              <li>JWT</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="project-kicker">Local AI</p>
+              <h3>Personal Email RAG System</h3>
+              <p>
+                Built a private Gmail question-answering pipeline with sentence-transformers,
+                ChromaDB, OAuth2 ingestion, and local Llama 3.2 inference through Ollama.
+              </p>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>Python</li>
+              <li>Llama 3.2</li>
+              <li>ChromaDB</li>
+              <li>OAuth2</li>
+            </ul>
+          </article>
+
+          <article class="project-card">
+            <div>
+              <p class="project-kicker">Software architecture</p>
+              <h3>Multi-Mode Calendar System</h3>
+              <p>
+                Architected a Java MVC calendar supporting GUI, CLI, and batch modes with
+                timezone-aware recurring events, CSV/ICS import-export, and automated quality
+                checks.
+              </p>
+            </div>
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>Java</li>
+              <li>Swing</li>
+              <li>MVC</li>
+              <li>JUnit</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split-section" id="skills">
+        <div class="section-heading">
+          <p class="eyebrow">Toolkit</p>
+          <h2>Comfortable across algorithms, interfaces, and shipping details.</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <p>Java, C++, Python, JavaScript, TypeScript, SQL, Bash</p>
+          </div>
+          <div class="skill-group">
+            <h3>Concepts</h3>
+            <p>Data structures and algorithms, OOP, distributed systems, concurrency, system design</p>
+          </div>
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <p>Linux, Git, Docker, Checkstyle, CI/CD, PostgreSQL, MongoDB, AWS S3 and RDS</p>
+          </div>
+          <div class="skill-group">
+            <h3>Strengths</h3>
+            <p>REST APIs, microservices, MVC architecture, data modeling, LLM evaluation workflows</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="about-copy">
+          <p class="eyebrow">About</p>
+          <h2>I like systems that feel simple because the hard parts are handled carefully.</h2>
+          <p>
+            I am pursuing an MS in Computer Science at Northeastern University and building across
+            backend systems, AI workflows, and user-facing applications. I like projects where
+            architecture, data, and product details all have to line up.
+          </p>
+        </div>
+        <div class="timeline" aria-label="Experience timeline">
+          <div class="timeline-item">
+            <span>2025-now</span>
+            <p>Northeastern University: MS in Computer Science and Foreign Credential Evaluator.</p>
+          </div>
+          <div class="timeline-item">
+            <span>2024</span>
+            <p>VidyarthiMitra.org: optimized MySQL/PHP performance, built Node.js APIs, and shipped Angular components.</p>
+          </div>
+          <div class="timeline-item">
+            <span>2024</span>
+            <p>Texas A&amp;M University-Texarkana: built ARIMA and LSTM energy forecasting models and won 1st place at a research symposium.</p>
+          </div>
+          <div class="timeline-item">
+            <span>2024</span>
+            <p>Outlier.ai: curated and validated NLP datasets for production LLM improvement cycles.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Have a role, project, or idea worth building?</h2>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:sarode.a@northeastern.edu">Email me</a>
+          <a class="button secondary" href="https://www.linkedin.com/in/sarode-aryan" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="button secondary" href="https://github.com/AryanSarode14" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
