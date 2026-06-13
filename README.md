@@ -2,6 +2,12 @@
 
 A responsive personal portfolio website for Aryan Sarode, built to showcase software engineering projects, technical skills, experience, and resume details.
 
+## Live Site
+
+View the portfolio here:
+
+https://aryansarode14.github.io/aryan-portfolio/
+
 ## Overview
 
 This portfolio highlights work across full-stack development, AI systems, backend architecture, and data-driven applications. It includes selected projects, resume-backed experience, contact links, and a downloadable resume.
@@ -22,6 +28,10 @@ This portfolio highlights work across full-stack development, AI systems, backen
 - JavaScript
 
 No framework or build step is required.
+
+## Deployment
+
+The site is deployed with GitHub Pages from the `main` branch using the workflow in `.github/workflows/pages.yml`.
 
 ## Project Structure
 
