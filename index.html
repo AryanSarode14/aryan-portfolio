@@ -1,23 +1,36 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Aryan Sarode portfolio: software projects, skills, experience, and contact links."
+      content="Aryan Sarode: software engineer building agentic AI systems, full-stack products, and the MCP servers that let AI agents operate them."
     >
-    <title>Aryan Sarode | Software Developer</title>
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230f766e'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='white'%3EAS%3C/text%3E%3C/svg%3E">
+    <title>Aryan Sarode | Agentic AI &amp; Software Engineer</title>
+    <meta name="theme-color" content="#fbfaf8" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0b0b0f" media="(prefers-color-scheme: dark)">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f3ff0'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Arial,sans-serif' font-size='26' font-weight='700' fill='white'%3EAS%3C/text%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <a class="skip-link" href="#top">Skip to content</a>
+
     <header class="site-header" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Aryan Sarode home">AS</a>
       <nav class="nav-links" aria-label="Portfolio sections">
@@ -26,59 +39,136 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-      </button>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/>
+            <path stroke="currentColor" stroke-width="1.6" stroke-linecap="round" d="M12 2.5v2.4M12 19.1v2.4M4.6 4.6l1.7 1.7M17.7 17.7l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.6 19.4l1.7-1.7M17.7 6.3l1.7-1.7"/>
+          </svg>
+          <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11Z"/>
+          </svg>
+        </button>
+        <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <main id="top">
       <section class="hero" aria-label="Portfolio introduction">
-        <img class="hero-image" src="assets/portfolio-hero.png" alt="">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Software developer</p>
+        <div class="hero-backdrop" aria-hidden="true"></div>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Agentic AI &amp; software engineer</p>
           <h1>Aryan Sarode</h1>
           <p class="hero-copy">
-            MS Computer Science student at Northeastern building full-stack systems, AI tools,
-            and data-driven software with a focus on performance and clean architecture.
+            I build AI systems designed to be operated by other AI &mdash; custom MCP servers,
+            autonomous agents, and the full-stack products around them. Currently an MS
+            Computer Science student at Northeastern University.
           </p>
           <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#work">View projects</a>
+            <a class="button primary" href="#finpulse">See FinPulse</a>
             <a class="button secondary" href="assets/aryan-sarode-resume.pdf">Resume</a>
           </div>
         </div>
       </section>
 
-      <section class="section intro-band" aria-label="Portfolio highlights">
+      <section class="section intro-band reveal" aria-label="Portfolio highlights">
         <div class="metric">
           <strong>MSCS</strong>
-          <span>Northeastern University, Boston, 2025-2027</span>
+          <span>Northeastern University, Boston, 2025&ndash;2027</span>
         </div>
         <div class="metric">
           <strong>Full stack</strong>
-          <span>React, Angular, Node.js, Spring Boot, PostgreSQL</span>
+          <span>Next.js, React, Angular, Node.js, Spring Boot, PostgreSQL</span>
         </div>
         <div class="metric">
-          <strong>AI systems</strong>
-          <span>LSTM forecasting, local RAG, NLP datasets, vector search</span>
+          <strong>Agentic AI</strong>
+          <span>MCP servers, Claude API, autonomous tool use, LLM evaluation</span>
         </div>
       </section>
 
       <section class="section" id="work">
-        <div class="section-heading">
+        <div class="section-heading reveal">
           <p class="eyebrow">Selected work</p>
           <h2>Projects with clear thinking under the hood.</h2>
         </div>
+
+        <article class="project-card project-card--featured reveal" id="finpulse">
+          <div class="featured-visual">
+            <img
+              src="assets/finpulse-dashboard.png"
+              alt="FinPulse dashboard showing spending summary, category breakdown, and transaction insights"
+              loading="lazy"
+            >
+          </div>
+          <div class="featured-body">
+            <p class="project-kicker">Flagship &middot; Agentic AI</p>
+            <h3>FinPulse</h3>
+            <p class="project-tagline">
+              An AI-powered personal finance platform that an AI agent can operate directly.
+            </p>
+            <p>
+              Imports transactions into Postgres, auto-categorizes them, and detects anomalous
+              spending with a statistical detector plus an ARIMA time-series model. Forecasts
+              spend and generates grounded natural-language insights through the Claude API.
+            </p>
+            <p>
+              Its headline feature is a custom MCP server that exposes the app&rsquo;s data as
+              read-only tools &mdash; so an agent like Claude Desktop can autonomously query
+              spending and surface anomalies over real data. This demonstrates agentic-AI
+              engineering, not just AI usage.
+            </p>
+
+            <figure class="featured-demo">
+              <img
+                src="assets/finpulse-mcp-demo.gif"
+                alt="Claude Desktop autonomously calling FinPulse's MCP tools to analyze spending."
+                loading="lazy"
+              >
+              <figcaption>Claude Desktop calling FinPulse&rsquo;s MCP tools, live</figcaption>
+            </figure>
+
+            <ul class="highlight-list" aria-label="Notable engineering details">
+              <li>Read-only MCP tools as a deliberate safety boundary</li>
+              <li>Shared query layer powering both the web app and the MCP server</li>
+              <li>Deterministic synthetic data with labeled anomalies for evaluation</li>
+            </ul>
+
+            <ul class="tag-list" aria-label="Technologies used">
+              <li>Next.js</li>
+              <li>TypeScript</li>
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>PostgreSQL</li>
+              <li>Prisma</li>
+              <li>Claude API</li>
+              <li>MCP</li>
+              <li>Docker</li>
+              <li>GitHub Actions</li>
+              <li>Vercel</li>
+            </ul>
+
+            <div class="featured-actions">
+              <a class="button primary" href="https://finpulse-web-pi.vercel.app" target="_blank" rel="noreferrer">
+                Live demo
+              </a>
+              <a class="button secondary" href="https://github.com/AryanSarode14/finpulse" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
         <div class="project-grid">
-          <article class="project-card featured">
+          <article class="project-card reveal">
             <div>
               <p class="project-kicker">Enterprise system</p>
               <h3>IT Service Management System</h3>
               <p>
-                Designed a PostgreSQL-backed service platform with 50+ relational tables, audit
-                logging, JWT authentication, and role-based access across incident, asset, and
-                change request modules.
+                A PostgreSQL-backed service platform with 50+ relational tables, JWT auth, audit
+                logging, and role-based access across incident, asset, and change modules.
               </p>
             </div>
             <ul class="tag-list" aria-label="Technologies used">
@@ -89,13 +179,13 @@
             </ul>
           </article>
 
-          <article class="project-card">
+          <article class="project-card reveal">
             <div>
               <p class="project-kicker">Local AI</p>
               <h3>Personal Email RAG System</h3>
               <p>
-                Built a private Gmail question-answering pipeline with sentence-transformers,
-                ChromaDB, OAuth2 ingestion, and local Llama 3.2 inference through Ollama.
+                A private Gmail Q&amp;A pipeline built with sentence-transformers, ChromaDB, and
+                local Llama 3.2 inference through Ollama, with OAuth2 ingestion.
               </p>
             </div>
             <ul class="tag-list" aria-label="Technologies used">
@@ -106,14 +196,13 @@
             </ul>
           </article>
 
-          <article class="project-card">
+          <article class="project-card reveal">
             <div>
               <p class="project-kicker">Software architecture</p>
               <h3>Multi-Mode Calendar System</h3>
               <p>
-                Architected a Java MVC calendar supporting GUI, CLI, and batch modes with
-                timezone-aware recurring events, CSV/ICS import-export, and automated quality
-                checks.
+                A Java MVC calendar with GUI, CLI, and batch modes, timezone-aware recurring
+                events, CSV/ICS import-export, and automated quality checks.
               </p>
             </div>
             <ul class="tag-list" aria-label="Technologies used">
@@ -126,7 +215,7 @@
         </div>
       </section>
 
-      <section class="section split-section" id="skills">
+      <section class="section split-section reveal" id="skills">
         <div class="section-heading">
           <p class="eyebrow">Toolkit</p>
           <h2>Comfortable across algorithms, interfaces, and shipping details.</h2>
@@ -134,54 +223,58 @@
         <div class="skills-grid">
           <div class="skill-group">
             <h3>Languages</h3>
-            <p>Java, C++, Python, JavaScript, TypeScript, SQL, Bash</p>
+            <p>Python, JavaScript, TypeScript, Java, C++, SQL, Bash</p>
           </div>
           <div class="skill-group">
-            <h3>Concepts</h3>
-            <p>Data structures and algorithms, OOP, distributed systems, concurrency, system design</p>
+            <h3>ML &amp; AI</h3>
+            <p>LLM applications, Retrieval-Augmented Generation (RAG), MCP servers / AI agents, prompt engineering, vector embeddings, ChromaDB, Llama 3.2, PyTorch, NLP, LLM evaluation</p>
           </div>
           <div class="skill-group">
-            <h3>Tools</h3>
-            <p>Linux, Git, Docker, Checkstyle, CI/CD, PostgreSQL, MongoDB, AWS S3 and RDS</p>
+            <h3>Frameworks</h3>
+            <p>React, Angular, Node.js, Express, Spring Boot, Next.js, FastAPI, REST APIs, MVC</p>
           </div>
           <div class="skill-group">
-            <h3>Strengths</h3>
-            <p>REST APIs, microservices, MVC architecture, data modeling, LLM evaluation workflows</p>
+            <h3>Cloud / Infra / DB</h3>
+            <p>AWS (S3, RDS), PostgreSQL, MongoDB, MySQL, Docker, Linux, CI/CD, Git, GitHub Actions, Vercel</p>
+          </div>
+          <div class="skill-group">
+            <h3>CS fundamentals</h3>
+            <p>Data structures &amp; algorithms, OOP, distributed systems, concurrency, system design</p>
           </div>
         </div>
       </section>
 
-      <section class="section about-section" id="about">
+      <section class="section about-section reveal" id="about">
         <div class="about-copy">
           <p class="eyebrow">About</p>
           <h2>I like systems that feel simple because the hard parts are handled carefully.</h2>
           <p>
-            I am pursuing an MS in Computer Science at Northeastern University and building across
-            backend systems, AI workflows, and user-facing applications. I like projects where
-            architecture, data, and product details all have to line up.
+            I am pursuing an MS in Computer Science at Northeastern University and building
+            across agentic AI, backend systems, and user-facing applications. I like projects
+            where architecture, data, and product details all have to line up.
           </p>
         </div>
         <div class="timeline" aria-label="Experience timeline">
           <div class="timeline-item">
-            <span>2025-now</span>
+            <span>2025&ndash;now</span>
             <p>Northeastern University: MS in Computer Science and Foreign Credential Evaluator.</p>
           </div>
           <div class="timeline-item">
-            <span>2024</span>
-            <p>VidyarthiMitra.org: optimized MySQL/PHP performance, built Node.js APIs, and shipped Angular components.</p>
+            <span>Jun&ndash;Dec 2024</span>
+            <p>VidyarthiMitra.org (Web Developer): optimized MySQL queries and added server-side caching, cutting page load times ~30% on a platform serving 1,000+ users. Built Node.js REST APIs and shipped reusable Angular components in Agile teams.</p>
           </div>
           <div class="timeline-item">
-            <span>2024</span>
-            <p>Texas A&amp;M University-Texarkana: built ARIMA and LSTM energy forecasting models and won 1st place at a research symposium.</p>
+            <span>Jun&ndash;Jul 2024</span>
+            <p>Texas A&amp;M University-Texarkana (Research Intern): built ARIMA and LSTM models in Python to forecast electricity consumption, winning 1st place at the university research symposium. Built large-scale data pipelines automating model evaluation.</p>
           </div>
           <div class="timeline-item">
-            <span>2024</span>
-            <p>Outlier.ai: curated and validated NLP datasets for production LLM improvement cycles.</p>
+            <span>Jan&ndash;Jun 2024</span>
+            <p>Outlier.ai (AI Contractor): curated and validated large-scale datasets for production LLM training and evaluation. Evaluated AI outputs to find failure patterns and improve model reliability.</p>
           </div>
         </div>
       </section>
 
-      <section class="contact-section" id="contact">
+      <section class="contact-section reveal" id="contact">
         <div>
           <p class="eyebrow">Contact</p>
           <h2>Have a role, project, or idea worth building?</h2>
@@ -193,6 +286,15 @@
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Aryan Sarode</p>
+      <div class="footer-links">
+        <a href="mailto:sarode.a@northeastern.edu">Email</a>
+        <a href="https://www.linkedin.com/in/sarode-aryan" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="https://github.com/AryanSarode14" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </footer>
 
     <script src="script.js"></script>
   </body>
